@@ -1,0 +1,7 @@
+## Tässä on ne tiedostopäätteet, jotka git jättää huomiotta.
+
+## väliaikaistiedostot
+*.tmp
+
+## hekemistot
+build/
