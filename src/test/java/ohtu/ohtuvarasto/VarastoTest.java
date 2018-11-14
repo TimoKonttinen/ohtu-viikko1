@@ -172,7 +172,7 @@ public class VarastoTest {
               double mahtuu = 2.0;
               
         // varastossa pitäisi olla tilaa 10 - 8 eli 4
-        assertEquals("saldo = 8.0, vielä tilaa 20",varasto.toString());
+        assertEquals("saldo = 8.0, vielä tilaa 2.0",varasto.toString());//piste poistettu
     }
     
     
