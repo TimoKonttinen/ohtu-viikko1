@@ -6,3 +6,4 @@
 ## hekemistot
 build/
 /.nb-gradle/
+/ ohtuvarasto/java/main/**
