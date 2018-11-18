@@ -1,5 +1,6 @@
 package ohtu.ohtuvarasto;
 
+import static org.hamcrest.CoreMatchers.is;
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -141,6 +142,7 @@ public class VarastoTest {
         double saatuMaara = varasto.otaVarastosta(2);
 
         assertEquals(2, saatuMaara, vertailuTarkkuus);
+//assertThat(saatuMaara,is(2.0));
     }
 
     @Test
