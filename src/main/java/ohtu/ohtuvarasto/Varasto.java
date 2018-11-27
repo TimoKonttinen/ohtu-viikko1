@@ -8,15 +8,12 @@ public class Varasto {
 
     // --- konstruktorit: ---
     public Varasto(double tilavuus) {  // tilavuus on annettava
-        if (tilavuus > 0.0) 
-        {
-if(tilavuus >0.0)
-{
-this.tilavuus = tilavuus;
-            }
-this.tilavuus = tilavuus;
-        } else // virheellinen, nollataan
-        {
+        if (tilavuus > 0.0) {
+            this.tilavuus = tilavuus;
+        } 
+        
+        else { // virheellinen, nollataan
+
             this.tilavuus = 0.0;  // => käyttökelvoton varasto
         }
         saldo = 0;     // oletus: varasto on tyhjä
@@ -45,16 +42,6 @@ this.tilavuus = tilavuus;
     }
 
     public double getTilavuus() {
-           for(int i=0;i<10;i++){
-            for(int j=10;j>0;j--){
-                for(int k=5; k>0;k--){
-                    System.out.println("k = "+k);
-                }
-                System.out.println("iii: "+i + " jiii "+j);
-            }
-            System.out.println("ulommassa silmukassa iii: "+i); 
-    }
-        
         return tilavuus;
     }
 
@@ -65,13 +52,12 @@ this.tilavuus = tilavuus;
     // --- asettavat aksessorit eli setterit: ---
     public void lisaaVarastoon(double maara) {
 
-        
-        if (maara < 0) // virhetilanteessa voidaan tehdä 
-        {
+        if (maara < 0) { // virhetilanteessa voidaan tehdä 
+
             return;       // tällainen pikapoistuminenkin!
         }
-        if (maara <= paljonkoMahtuu()) // omia aksessoreita voi kutsua
-        {
+        if (maara <= paljonkoMahtuu()) { // omia aksessoreita voi kutsua
+
             saldo = saldo + maara;          // ihan suoraan sellaisinaan
         } else {
             saldo = tilavuus;  // täyteen ja ylimäärä hukkaan!
@@ -79,8 +65,8 @@ this.tilavuus = tilavuus;
     }
 
     public double otaVarastosta(double maara) {
-        if (maara < 0) // virhetilanteessa voidaan tehdä 
-        {
+        if (maara < 0) { // virhetilanteessa voidaan tehdä 
+
             return 0.0;   // tällainen pikapoistuminenkin!
         }
         if (maara > saldo) {          // annetaan mitä voidaan
