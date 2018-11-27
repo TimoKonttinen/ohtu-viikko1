@@ -7,3 +7,4 @@
 build/
 /.nb-gradle/
 / ohtuvarasto/java/main/**
+/gradleoppia/.nb-gradle/
