@@ -15,10 +15,12 @@ public class VarastoTest {
 
     Varasto varasto;
     double vertailuTarkkuus = 0.0001;
+    final public double OIKEA_TILAVUUS = 10.0;
 
     @Before
     public void setUp() {
-        varasto = new Varasto(10);
+        
+        varasto = new Varasto(OIKEA_TILAVUUS);
     }
 //************ konstruktoritestit *****************
     @Test
@@ -52,14 +54,14 @@ public class VarastoTest {
     
                 @Test
     public void uudellaVarastollaOikeaSaldoYlitaytossa() {
-        varasto = new Varasto(10.0, 12.0);//tilavuus, alkusaldo
+        varasto = new Varasto(OIKEA_TILAVUUS, 12.0);//tilavuus, alkusaldo
      
         assertEquals(10.0, varasto.getSaldo(), vertailuTarkkuus);
     }
     
                     @Test
     public void uudellaVarastollaOikeaSaldoNegatiivisellaTaytolla() {
-        varasto = new Varasto(10.0, -12.0);//tilavuus, alkusaldo
+        varasto = new Varasto(OIKEA_TILAVUUS, -12.0);//tilavuus, alkusaldo
      
         assertEquals(0.0, varasto.getSaldo(), vertailuTarkkuus);
     }
@@ -79,7 +81,7 @@ public class VarastoTest {
         varasto.lisaaVarastoon(100);
 
         // saldon pitäisi olla maksimissaan varaston tilavuus
-        assertEquals(10, varasto.getTilavuus(), vertailuTarkkuus);
+        assertEquals(OIKEA_TILAVUUS, varasto.getTilavuus(), vertailuTarkkuus);
     }
 
     public void negatiivinenLisaysEiMuutaSaldoa() {
